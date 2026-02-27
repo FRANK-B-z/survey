@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    width: 150px;
+    animation: spin 20s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.navbar h1 {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+/* Form Container */
+.survey-container {
+    max-width: 700px;
+    margin: 40px auto;
+    background: rgba(255,255,255,0.08);
+    padding: 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h2, h3 {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 15px;
+}
+
+textarea {
+    min-height: 80px;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Hide Sections */
+.hidden-section {
+    display: none;
+}
+
+.typing-text {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #00c6ff;
+    width: 0;
+    animation: typing 1s steps(15, end) forwards, blink 0.8s ;
+}
+
+/* Typing Effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 60% }
+}
+
+/* Cursor Blink */
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+.important-details {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.details-box {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 700px;
+    margin: 20px auto;
+    line-height: 1.7;
+    border-left: 5px solid #00c6ff;
+}
+
+.details-box p {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+}
+.email-link {
+    color: #00c6ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.email-link:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px #00c6ff;
+}
+
+body {
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url("images/background3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

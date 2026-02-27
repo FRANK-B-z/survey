@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Campus Connect | Survey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="connectlogo.png">
+</head>
+
+<body>
+
+
+
+<header class="navbar">
+    <img src="images/connectlogo.png" alt="Campus Connect Logo" class="logo">
+    <h1>CAMPUS CONNECT</h1>
+</header>
+
+<div class="survey-container">
+
+    <h2 class="typing-text">Campus Marketplace Survey</h2>
+ <div class="details-box">
+        <p><strong>Purpose:</strong> This survey is conducted to evaluate the feasibility of a student-only marketplace platform for campus use.</p>
+
+        <p><strong>Confidentiality:</strong> Your responses are anonymous and will only be used for academic research purposes.</p>
+
+        <p><strong>Voluntary Participation:</strong> Participation in this survey is completely voluntary. You may choose to stop at any time.</p>
+
+        <p><strong>Data Protection:</strong> We do not collect passwords or sensitive personal information.</p>
+
+        <p><strong>Contact:</strong> For questions or concerns, please contact <strong></strong></p><a href="mailto:frabanda120@gmail.com" class="email-link">
+        Frank Banda
+    </a>
+    </div>
+    <form id="contact-form"
+          action="https://api.web3forms.com/submit"
+          method="POST">
+
+        <input type="hidden" name="access_key" value="2c75b616-5cc8-43dd-8fac-5bfe3d9d2c46">
+        <input type="hidden" name="subject" value="New Campus Survey Response">
+        <input type="hidden" name="from_name" value="Campus Connect">
+        <input type="hidden" name="redirect" value="thank-you.html">
+
+        <!-- Year -->
+        <label>What year are you in?</label>
+        <select name="year" required>
+            <option value="">Select</option>
+            <option>First Year</option>
+            <option>Second Year</option>
+            <option>Third Year</option>
+            <option>Fourth Year</option>
+        </select>
+
+        <!-- Buy/Sell -->
+        <label>Do you buy or sell items?</label>
+        <select id="buySellSelect" name="buy_sell" required>
+            <option value="">Select</option>
+            <option value="both">Buy & Sell</option>
+            <option value="buy">Buying Only</option>
+            <option value="none">None</option>
+        </select>
+
+        <!-- Selling -->
+        <div id="sellingSection" class="hidden-section">
+            <h3>Selling Questions</h3>
+            <label>Where do you sell items?</label>
+            <select name="platform">
+                <option>WhatsApp</option>
+                <option>Facebook</option>
+                <option>Friends</option>
+                <option>Other</option>
+            </select>
+
+            <label>Problems when selling?</label>
+            <textarea name="selling_problems"></textarea>
+        </div>
+
+        <!-- Buying -->
+        <div id="buyingSection" class="hidden-section">
+            <h3>Buying Questions</h3>
+            <label>Problems when buying?</label>
+            <textarea name="buying_problems"></textarea>
+        </div>
+
+        <!-- Idea -->
+        <h3>Idea Testing</h3>
+
+        <label>Would you use a CBU marketplace app?</label>
+        <select name="use_app" required>
+            <option value="">Select</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Maybe</option>
+        </select>
+
+        <button type="submit">Submit Survey</button>
+
+    </form>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
