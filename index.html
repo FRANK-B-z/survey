@@ -12,8 +12,6 @@
 
 <body>
 
-
-
 <header class="navbar">
     <img src="images/connectlogo.png" alt="Campus Connect Logo" class="logo">
     <h1>CAMPUS CONNECT</h1>
@@ -21,80 +19,89 @@
 
 <div class="survey-container">
 
-    <h2 class="typing-text">Survey</h2>
- <div class="details-box">
-        <p><strong>Purpose:</strong> This survey is conducted to evaluate the feasibility of a student-only marketplace platform for campus use.</p>
+    <h2 class="typing-text">Campus Marketplace Survey</h2>
 
-        <p><strong>Confidentiality:</strong> Your responses are anonymous and will only be used for academic research purposes.</p>
-
-        <p><strong>Voluntary Participation:</strong> Participation in this survey is completely voluntary. You may choose to stop at any time.</p>
-
-        <p><strong>Data Protection:</strong> We do not collect passwords or sensitive personal information.</p>
-
-        <p><strong>Contact:</strong> For questions or concerns, please contact <strong></strong></p><a href="mailto:frabanda120@gmail.com" class="email-link">
-        Frank Banda
-    </a>
+    <div class="details-box">
+        <p><strong>Purpose:</strong>This survey is designed to explore the need for a dedicated student marketplace at CBU. The goal is to understand student buying and selling habits, identify challenges, and determine whether a secure campus-based platform would improve convenience, trust, and communication between students.</p>
+        <p><strong>Confidentiality:</strong> All responses are confidential and anonymous. The information collected will be used strictly for academic research and to improve the proposed platform. We do not collect passwords or sensitive personal information.</p>
+        <p><strong>Voluntary Participation:</strong> Participation in this survey is completely voluntary. You may choose not to answer any question or stop the survey at any time.</p>
+        <p><strong>Data Protection:</strong> We do not collect passwords, financial information, or any sensitive personal data. All information provided is used strictly for research purposes.</p>
+        <p><strong>For questions, feedback, or concerns about this survey, please contact:</strong>
+            <a href="mailto:frabanda120@gmail.com" class="email-link">Frank Banda</a>
+        </p>
     </div>
-    <form id="contact-form"
-          action="https://api.web3forms.com/submit"
-          method="POST">
+
+    <form action="https://api.web3forms.com/submit" method="POST">
 
         <input type="hidden" name="access_key" value="2c75b616-5cc8-43dd-8fac-5bfe3d9d2c46">
         <input type="hidden" name="subject" value="New Campus Survey Response">
         <input type="hidden" name="from_name" value="Campus Connect">
-<input type="hidden" name="redirect" value="https://www.camct.site/thank-you.html">
+      <input type="hidden" name="redirect" value="https://www.camct.site/thank-you.html">
 
-        <!-- Year -->
+        <!-- YEAR -->
         <label>What year are you in?</label>
-        <select name="year" required>
-            <option value="">Select</option>
-            <option>First Year</option>
-            <option>Second Year</option>
-            <option>Third Year</option>
-            <option>Fourth Year</option>
-        </select>
+        <div class="option-group">
+            <label class="option-card"><input type="radio" name="year" value="First Year" required><span>First Year</span></label>
+            <label class="option-card"><input type="radio" name="year" value="Second Year"><span>Second Year</span></label>
+            <label class="option-card"><input type="radio" name="year" value="Third Year"><span>Third Year</span></label>
+            <label class="option-card"><input type="radio" name="year" value="Fourth Year"><span>Fourth Year</span></label>
+        </div>
 
-        <!-- Buy/Sell -->
+        <!-- BUY / SELL -->
         <label>Do you buy or sell items?</label>
-        <select id="buySellSelect" name="buy_sell" required>
-            <option value="">Select</option>
-            <option value="both">Buy & Sell</option>
-            <option value="buy">Buying Only</option>
-            <option value="none">None</option>
-        </select>
+        <div class="option-group">
+            <label class="option-card"><input type="radio" name="buy_sell" value="both" required><span>Buy & Sell</span></label>
+            <label class="option-card"><input type="radio" name="buy_sell" value="buy"><span>Buying Only</span></label>
+            <label class="option-card"><input type="radio" name="buy_sell" value="none"><span>None</span></label>
+        </div>
 
-        <!-- Selling -->
+        <!-- SELLING SECTION -->
         <div id="sellingSection" class="hidden-section">
             <h3>Selling Questions</h3>
-            <label>Where do you sell items?</label>
-            <select name="platform">
-                <option>WhatsApp</option>
-                <option>Facebook</option>
-                <option>Friends</option>
-                <option>Other</option>
-            </select>
+
+            <label>Where do you sell items? (Select all that apply)</label>
+            <div class="option-group">
+                <label class="option-card"><input type="checkbox" name="platform[]" value="WhatsApp"><span>WhatsApp</span></label>
+                <label class="option-card"><input type="checkbox" name="platform[]" value="Facebook"><span>Facebook</span></label>
+                <label class="option-card"><input type="checkbox" name="platform[]" value="Friends"><span>Friends</span></label>
+                <label class="option-card"><input type="checkbox" name="platform[]" value="Other"><span>Other</span></label>
+            </div>
 
             <label>Problems when selling?</label>
             <textarea name="selling_problems"></textarea>
         </div>
 
-        <!-- Buying -->
+        <!-- BUYING SECTION -->
         <div id="buyingSection" class="hidden-section">
             <h3>Buying Questions</h3>
             <label>Problems when buying?</label>
             <textarea name="buying_problems"></textarea>
         </div>
 
-        <!-- Idea -->
+        <!-- IDEA TESTING -->
         <h3>Idea Testing</h3>
 
         <label>Would you use a CBU marketplace app?</label>
-        <select name="use_app" required>
-            <option value="">Select</option>
-            <option>Yes</option>
-            <option>No</option>
-            <option>Maybe</option>
-        </select>
+        <div class="option-group">
+            <label class="option-card"><input type="radio" name="use_app" value="yes" required><span>Yes</span></label>
+            <label class="option-card"><input type="radio" name="use_app" value="no"><span>No</span></label>
+            <label class="option-card"><input type="radio" name="use_app" value="maybe"><span>Maybe</span></label>
+        </div>
+
+        <!-- BUSINESS DETAILS -->
+        <div id="businessSection" class="hidden-section">
+            <h3>Business Interest</h3>
+            <p>If you are a business owner and interested in joining when the app launches, please leave your details below.</p>
+
+            <label>Your Full Name</label>
+            <input type="text" name="business_owner_name">
+
+            <label>Email Address</label>
+            <input type="email" name="business_email">
+
+            <label>Business Name</label>
+            <input type="text" name="business_name">
+        </div>
 
         <button type="submit">Submit Survey</button>
 
@@ -102,8 +109,5 @@
 </div>
 
 <script src="script.js"></script>
-
 </body>
-
 </html>
-
