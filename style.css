@@ -6,12 +6,14 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url("images/background3.jpg");
+    background-size: cover;
+    background-position: center;
     color: white;
     min-height: 100vh;
 }
 
-/* Navbar */
 .navbar {
     display: flex;
     align-items: center;
@@ -32,12 +34,6 @@ body {
     to { transform: rotate(360deg); }
 }
 
-.navbar h1 {
-    font-size: 1.5rem;
-    letter-spacing: 2px;
-}
-
-/* Form Container */
 .survey-container {
     max-width: 700px;
     margin: 40px auto;
@@ -46,37 +42,32 @@ body {
     border-radius: 15px;
     backdrop-filter: blur(20px);
     box-shadow: 0 10px 40px rgba(0,0,0,0.5);
-    animation: fadeIn 1s ease;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-h2, h3 {
-    margin-bottom: 20px;
 }
 
 label {
     display: block;
-    margin-top: 15px;
-    margin-bottom: 8px;
+    margin: 15px 0 8px;
 }
 
-input, select, textarea {
+textarea,
+input[type="text"],
+input[type="email"] {
     width: 100%;
     padding: 12px;
-    border-radius: 8px;
+    border-radius: 10px;
     border: none;
     margin-bottom: 15px;
+    background: rgba(255,255,255,0.08);
+    color: white;
+    font-family: 'Poppins', sans-serif;
 }
 
-textarea {
-    min-height: 80px;
+textarea:focus,
+input:focus {
+    outline: none;
+    box-shadow: 0 0 10px #00c6ff;
 }
 
-/* Button */
 button {
     width: 100%;
     padding: 14px;
@@ -93,65 +84,67 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* Hide Sections */
 .hidden-section {
     display: none;
 }
 
-.typing-text {
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 3px solid #00c6ff;
-    width: 0;
-    animation: typing 1s steps(15, end) forwards, blink 0.8s ;
+.option-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
 }
 
-/* Typing Effect */
-@keyframes typing {
-    from { width: 0 }
-    to { width: 60% }
-}
-
-/* Cursor Blink */
-@keyframes blink {
-    50% { border-color: transparent; }
-}
-.important-details {
-    margin-bottom: 40px;
-    text-align: center;
-}
-
-.details-box {
-    background: rgba(255, 255, 255, 0.08);
-    padding: 25px;
+.option-card {
+    display: block;
+    padding: 14px;
     border-radius: 12px;
-    max-width: 700px;
-    margin: 20px auto;
-    line-height: 1.7;
-    border-left: 5px solid #00c6ff;
-}
-
-.details-box p {
-    margin-bottom: 12px;
-    font-size: 0.95rem;
-}
-.email-link {
-    color: #00c6ff;
-    text-decoration: none;
-    font-weight: bold;
+    background: rgba(255,255,255,0.08);
+    text-align: center;
+    cursor: pointer;
     transition: 0.3s ease;
 }
 
-.email-link:hover {
-    color: #ffffff;
-    text-shadow: 0 0 8px #00c6ff;
+.option-card input {
+    display: none;
 }
 
-body {
-    background-image: 
-        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-        url("images/background3.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.option-card:hover {
+    transform: translateY(-4px);
+    background: rgba(255,255,255,0.15);
+}
+
+.option-card input:checked + span {
+    color: white;
+    font-weight: 600;
+    text-shadow: 0 0 10px #00c6ff;
+}
+
+.option-card input:checked + span::before {
+    content: "✔ ";
+}
+/* Modern Email Button Style */
+.email-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 18px;
+    border-radius: 25px;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 198, 255, 0.4);
+}
+
+/* Hover Effect */
+.email-link:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 198, 255, 0.8);
+}
+
+/* Click Effect */
+.email-link:active {
+    transform: scale(0.98);
 }
