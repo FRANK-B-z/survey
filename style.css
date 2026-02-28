@@ -7,7 +7,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-                url("images/background3.jpg");
+                url("images/background6.jpg");
     background-size: cover;
     background-position: center;
     color: white;
@@ -148,3 +148,4 @@ button:hover {
 .email-link:active {
     transform: scale(0.98);
 }
+
