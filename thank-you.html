@@ -1,98 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Thank You | Campus Connect</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Thank You | Campus Connect</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="connectlogo.png">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="connectlogo.png">
+<!-- Open Graph (Professional Link Preview) -->
+<meta property="og:title" content="Campus Connect Survey">
+<meta property="og:description" content="Help improve a student only marketplace by completing this short survey.">
+<meta property="og:image" content="https://www.camct.site/images/connectlogo.png">
+<meta property="og:url" content="https://www.camct.site/">
+<meta property="og:type" content="website">
 
-    <style>
+<!-- Twitter Card (also improves sharing preview) -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Campus Connect Survey">
+<meta name="twitter:description" content="Help improve a student only marketplace by completing this short survey.">
+<meta name="twitter:image" content="https://www.camct.site/images/connectlogo.png">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            color: white;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+<style>
 
-        /* Fade Animation */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        .box {
-            background: rgba(255,255,255,0.08);
-            padding: 50px;
-            border-radius: 15px;
-            backdrop-filter: blur(20px);
-            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
-            text-align: center;
-            max-width: 500px;
-            animation: fadeIn 1s ease;
-        }
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:white;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
 
-        /* Typing Animation */
-        .typing-text {
-            overflow: hidden;
-            white-space: nowrap;
-            border-right: 3px solid #00c6ff;
-            width: 0;
-            margin: auto;
-            animation: typing 2s steps(20, end) forwards, blink 0.8s infinite;
-        }
+/* Fade In */
+@keyframes fadeIn{
+    from{opacity:0;transform:translateY(20px);}
+    to{opacity:1;transform:translateY(0);}
+}
 
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
+.box{
+    background:rgba(255,255,255,0.08);
+    padding:50px;
+    border-radius:15px;
+    backdrop-filter:blur(20px);
+    box-shadow:0 10px 40px rgba(0,0,0,0.5);
+    text-align:center;
+    max-width:600px;
+    animation:fadeIn 1s ease;
+}
 
-        @keyframes blink {
-            50% { border-color: transparent; }
-        }
+/* Typing */
+.typing-text{
+    overflow:hidden;
+    white-space:nowrap;
+    border-right:3px solid #00c6ff;
+    width:0;
+    margin:auto;
+    animation:typing 2s steps(20,end) forwards,blink 0.8s infinite;
+}
 
-        p {
-            opacity: 0.85;
-            margin: 25px 0;
-        }
+@keyframes typing{
+    from{width:0}
+    to{width:100%}
+}
 
-        /* Button Style (Same as Survey) */
-        a {
-            display: inline-block;
-            padding: 14px 30px;
-            background: linear-gradient(90deg, #00c6ff, #0072ff);
-            border-radius: 8px;
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            transition: 0.3s;
-        }
+@keyframes blink{
+    50%{border-color:transparent;}
+}
 
-        a:hover {
-            transform: scale(1.05);
-        }
+p{
+    opacity:0.85;
+    margin:20px 0;
+}
 
-    </style>
+/* Share Counter */
+.counter{
+    margin-top:15px;
+    font-weight:600;
+    color:#00c6ff;
+}
+
+/* Social Icons */
+.social-icons{
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.icon{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:22px;
+    color:white;
+    text-decoration:none;
+    cursor:pointer;
+    transition:0.3s ease;
+    position:relative;
+}
+
+/* Glow Animation */
+@keyframes glow{
+    0%{box-shadow:0 0 5px rgba(255,255,255,0.2);}
+    50%{box-shadow:0 0 20px rgba(255,255,255,0.8);}
+    100%{box-shadow:0 0 5px rgba(255,255,255,0.2);}
+}
+
+.icon{
+    animation:glow 2s infinite;
+}
+
+.icon:hover{
+    transform:translateY(-5px) scale(1.1);
+}
+
+/* Colors */
+.whatsapp{background:#25D366;}
+.facebook{background:#1877F2;}
+.instagram{
+    background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);
+}
+.copy{background:#00c6ff;}
+
+/* Back Button */
+a.button{
+    display:inline-block;
+    margin-top:30px;
+    padding:12px 25px;
+    background:linear-gradient(90deg,#00c6ff,#0072ff);
+    border-radius:8px;
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+a.button:hover{
+    transform:scale(1.05);
+}
+
+</style>
 </head>
 
 <body>
 
-    <div class="box">
-        <h1 class="typing-text">Thank You </h1>
-        <p>Your survey has been successfully submitted.</p>
-        <a href="index.html">Back to Survey</a>
-    </div>
+<div class="box">
+
+<h1 class="typing-text">Thank You </h1>
+
+<p>Your survey has been successfully submitted.</p>
+
+<p><strong>Share this survey with your friends:</strong></p>
+
+<div class="social-icons">
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/?text=Can%20you%20please%20help%20me%20by%20filling%20out%20this%20short%20Campus%20Connect%20survey%3F%0A%0AIt%20only%20takes%20a%20minute%3A%0Ahttps%3A%2F%2Fwww.camct.site%2F%0A%0AThank%20you%20for%20your%20support."
+target="_blank" class="icon whatsapp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.camct.site/"
+       target="_blank" class="icon facebook">
+       <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/"
+       target="_blank" class="icon instagram">
+       <i class="fab fa-instagram"></i>
+    </a>
+
+    <!-- Copy Link -->
+    <button onclick="copyLink()" class="icon copy">
+       <i class="fas fa-link"></i>
+    </button>
+
+</div>
+
+<div class="counter">
+    Total Shares: <span id="shareCount">0</span>
+</div>
+
+<a href="index.html" class="button">Back to Survey</a>
+
+</div>
+
+<script>
+
+/* Copy Link */
+function copyLink(){
+    navigator.clipboard.writeText("https://www.camct.site/");
+    alert("Link copied! Share it ");
+
+    increaseCounter();
+}
+
+/* Simple Share Counter */
+function increaseCounter(){
+    let count = localStorage.getItem("shareCount") || 0;
+    count++;
+    localStorage.setItem("shareCount", count);
+    document.getElementById("shareCount").innerText = count;
+}
+
+/* Load Counter */
+window.onload = function(){
+    let count = localStorage.getItem("shareCount") || 0;
+    document.getElementById("shareCount").innerText = count;
+}
+
+</script>
 
 </body>
 </html>
