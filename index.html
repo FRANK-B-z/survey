@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Campus Connect | Survey</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Campus Connect | Survey</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="connectlogo.png">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="images/connectlogo.png">
 </head>
 
 <body>
@@ -19,93 +19,269 @@
 
 <div class="survey-container">
 
-    <h2 class="typing-text">Campus Marketplace Survey</h2>
+<h2 class="typing-text">Campus Marketplace Survey</h2>
 
-    <div class="details-box">
-        <p><strong>Purpose:</strong>This survey is designed to explore the need for a dedicated student marketplace at CBU. The goal is to understand student buying and selling habits, identify challenges, and determine whether a secure campus-based platform would improve convenience, trust, and communication between students.</p>
-        <p><strong>Confidentiality:</strong> All responses are confidential and anonymous. The information collected will be used strictly for academic research and to improve the proposed platform. We do not collect passwords or sensitive personal information.</p>
-        <p><strong>Voluntary Participation:</strong> Participation in this survey is completely voluntary. You may choose not to answer any question or stop the survey at any time.</p>
-        <p><strong>Data Protection:</strong> We do not collect passwords, financial information, or any sensitive personal data. All information provided is used strictly for research purposes.</p>
-        <p><strong>For questions, feedback, or concerns about this survey, please contact:</strong>
-            <a href="mailto:frabanda120@gmail.com" class="email-link">Frank Banda</a>
-        </p>
-    </div>
+<div class="details-box">
 
-    <form action="https://api.web3forms.com/submit" method="POST">
+<p><strong>Purpose:</strong> This survey is designed to explore the need for a dedicated student marketplace at universities and colleges. The goal is to understand student buying and selling habits, identify challenges, and determine whether a secure campus-based platform would improve convenience, trust, and communication between students.</p>
 
-        <input type="hidden" name="access_key" value="2c75b616-5cc8-43dd-8fac-5bfe3d9d2c46">
-        <input type="hidden" name="subject" value="New Campus Survey Response">
-        <input type="hidden" name="from_name" value="Campus Connect">
-      <input type="hidden" name="redirect" value="https://www.camct.site/thank-you.html">
+<p><strong>Confidentiality:</strong> All responses are confidential and anonymous. The information collected will be used strictly for academic research and to improve the proposed platform. We do not collect passwords or sensitive personal information.</p>
 
-        <!-- YEAR -->
-        <label>What year are you in?</label>
-        <div class="option-group">
-            <label class="option-card"><input type="radio" name="year" value="First Year" required><span>First Year</span></label>
-            <label class="option-card"><input type="radio" name="year" value="Second Year"><span>Second Year</span></label>
-            <label class="option-card"><input type="radio" name="year" value="Third Year"><span>Third Year</span></label>
-            <label class="option-card"><input type="radio" name="year" value="Fourth Year"><span>Fourth Year</span></label>
-        </div>
+<p><strong>Voluntary Participation:</strong> Participation in this survey is completely voluntary. You may choose not to answer any question or stop the survey at any time.</p>
 
-        <!-- BUY / SELL -->
-        <label>Do you buy or sell items?</label>
-        <div class="option-group">
-            <label class="option-card"><input type="radio" name="buy_sell" value="both" required><span>Buy & Sell</span></label>
-            <label class="option-card"><input type="radio" name="buy_sell" value="buy"><span>Buying Only</span></label>
-            <label class="option-card"><input type="radio" name="buy_sell" value="none"><span>None</span></label>
-        </div>
+<p><strong>Data Protection:</strong> We do not collect passwords, financial information, or any sensitive personal data. All information provided is used strictly for research purposes.</p>
 
-        <!-- SELLING SECTION -->
-        <div id="sellingSection" class="hidden-section">
-            <h3>Selling Questions</h3>
+<p><strong>For questions, feedback, or concerns about this survey, please contact:</strong>
+<a href="mailto:frabanda120@gmail.com" class="email-link">Frank Banda</a>
+</p>
 
-            <label>Where do you sell items? (Select all that apply)</label>
-            <div class="option-group">
-                <label class="option-card"><input type="checkbox" name="platform[]" value="WhatsApp"><span>WhatsApp</span></label>
-                <label class="option-card"><input type="checkbox" name="platform[]" value="Facebook"><span>Facebook</span></label>
-                <label class="option-card"><input type="checkbox" name="platform[]" value="Friends"><span>Friends</span></label>
-                <label class="option-card"><input type="checkbox" name="platform[]" value="Other"><span>Other</span></label>
-            </div>
+</div>
 
-            <label>Problems when selling?</label>
-            <textarea name="selling_problems"></textarea>
-        </div>
+<form action="https://api.web3forms.com/submit" method="POST">
 
-        <!-- BUYING SECTION -->
-        <div id="buyingSection" class="hidden-section">
-            <h3>Buying Questions</h3>
-            <label>Problems when buying?</label>
-            <textarea name="buying_problems"></textarea>
-        </div>
+<input type="hidden" name="access_key" value="2c75b616-5cc8-43dd-8fac-5bfe3d9d2c46">
+<input type="hidden" name="subject" value="New Campus Survey Response">
+<input type="hidden" name="from_name" value="Campus Connect">
+<input type="hidden" name="redirect" value="https://www.camct.site/thank-you.html">
 
-        <!-- IDEA TESTING -->
-        <h3>Idea Testing</h3>
+<!-- UNIVERSITY SEARCHABLE FIELD -->
+<label>Which university or college do you attend?</label>
+<input list="institutions" name="institution" placeholder="Type or search your university..." required class="search-input">
 
-        <label>Would you use a CBU marketplace app?</label>
-        <div class="option-group">
-            <label class="option-card"><input type="radio" name="use_app" value="yes" required><span>Yes</span></label>
-            <label class="option-card"><input type="radio" name="use_app" value="no"><span>No</span></label>
-            <label class="option-card"><input type="radio" name="use_app" value="maybe"><span>Maybe</span></label>
-        </div>
+<datalist id="institutions">
 
-        <!-- BUSINESS DETAILS -->
-        <div id="businessSection" class="hidden-section">
-            <h3>Business Interest</h3>
-            <p>If you are a business owner and interested in joining when the app launches, please leave your details below.</p>
+<!-- PUBLIC UNIVERSITIES -->
+<option value="University of Zambia">
+<option value="Copperbelt University">
+<option value="Mulungushi University">
+<option value="Mukuba University">
+<option value="Levy Mwanawasa Medical University">
+<option value="Kwame Nkrumah University">
+<option value="Kapasa Makasa University">
+<option value="Palabana University">
 
-            <label>Your Full Name</label>
-            <input type="text" name="business_owner_name">
+<!-- PRIVATE UNIVERSITIES -->
+<option value="Cavendish University Zambia">
+<option value="University of Lusaka">
+<option value="Rusangu University">
+<option value="Northrise University">
+<option value="African Christian University">
+<option value="Africa Research University">
+<option value="Central African Baptist University">
+<option value="Chreso University">
+<option value="City University of Science and Technology">
+<option value="Copperstone University">
+<option value="Eden University">
+<option value="Information and Communication University">
+<option value="Justo Mwale University">
+<option value="Lusaka Apex Medical University">
+<option value="Rockview University">
+<option value="Texila American University Zambia">
+<option value="Unicaf University Zambia">
+<option value="Zambian Open University">
+<option value="ZCAS University">
+<option value="Blessings University of Excellence">
+<option value="Bethel University Zambia">
+<option value="Brook Besor University">
+<option value="Harvest University">
+<option value="Supershine University">
+<option value="Trans-Africa Christian University">
+<option value="Trinity University, Zambia">
+<option value="University of Barotseland">
+<option value="Zambian Christian University">
 
-            <label>Email Address</label>
-            <input type="email" name="business_email">
+<option value="Other / Not Listed">
 
-            <label>Business Name</label>
-            <input type="text" name="business_name">
-        </div>
+</datalist>
 
-        <button type="submit">Submit Survey</button>
+<!-- YEAR -->
+<label>What year are you in?</label>
+<div class="option-group">
 
-    </form>
+<label class="option-card">
+<input type="radio" name="year" value="First Year" required>
+<span>First Year</span>
+</label>
+
+<label class="option-card">
+<input type="radio" name="year" value="Second Year">
+<span>Second Year</span>
+</label>
+
+<label class="option-card">
+<input type="radio" name="year" value="Third Year">
+<span>Third Year</span>
+</label>
+
+<label class="option-card">
+<input type="radio" name="year" value="Fourth Year">
+<span>Fourth Year</span>
+</label>
+
+<label class="option-card">
+<input type="radio" name="year" value="Fifth Year">
+<span>Fifth Year</span>
+</label>
+
+</div>
+
+<!-- BUY / SELL -->
+<label>Do you buy or sell items on campus?</label>
+<div class="option-group">
+
+<label class="option-card">
+<input type="radio" name="buy_sell" value="both" required>
+<span>Buy & Sell</span>
+</label>
+
+<label class="option-card">
+<input type="radio" name="buy_sell" value="buy">
+<span>Buying Only</span>
+</label>
+
+<label class="option-card">
+<input type="radio" name="buy_sell" value="sell">
+<span>Selling Only</span>
+</label>
+
+<label class="option-card">
+<input type="radio" name="buy_sell" value="none">
+<span>I Don’t Buy or Sell</span>
+</label>
+
+</div>
+
+<!-- BOTH SECTION -->
+<div id="bothSection" class="hidden-section">
+<h3>Buy & Sell Experience</h3>
+<label>What challenges do you face when buying ?</label>
+<textarea name="both_challenges"></textarea>
+<label>What challenges do you face when selling?</label>
+<textarea name="both_challenges"></textarea>
+</div>
+
+<!-- BUYING ONLY -->
+<div id="buyingSection" class="hidden-section">
+<h3>Buying Experience</h3>
+<label>What problems do you face when buying?</label>
+<textarea name="buying_problems"></textarea>
+</div>
+
+<!-- SELLING ONLY -->
+<div id="sellingSection" class="hidden-section">
+<h3>Selling Experience</h3>
+<label>What problems do you face when selling?</label>
+<textarea name="selling_problems"></textarea>
+</div>
+
+<!-- NONE -->
+<div id="noneSection" class="hidden-section">
+<h3>Students Who Do Not Buy or Sell</h3>
+
+<label>Why do you not buy or sell items on campus?</label>
+<textarea name="reason_not_participating"></textarea>
+
+<label>If your problem is solved, would you start buying or selling on campus?</label>
+<div class="option-group">
+<label class="option-card"><input type="radio" name="interest_in_app" value="yes"><span>Yes</span></label>
+
+<label class="option-card"><input type="radio" name="interest_in_app" value="no"><span>No</span></label>
+</div>
+
+</div>
+
+
+<!-- IDEA TESTING -->
+<h3>Idea Testing</h3>
+
+<label>Would you use a campus marketplace app when it launches?</label>
+<div class="option-group">
+
+<label class="option-card">
+<input type="radio" name="use_app" value="yes" required>
+<span>Yes</span>
+</label>
+
+<label class="option-card">
+<input type="radio" name="use_app" value="business">
+<span>Yes, As a Business</span>
+</label>
+
+<label class="option-card">
+<input type="radio" name="use_app" value="maybe">
+<span>Maybe</span>
+</label>
+
+<label class="option-card">
+<input type="radio" name="use_app" value="no">
+<span>No</span>
+</label>
+
+</div>
+
+<div id="yesSection" class="hidden-section">
+<h3>Stay Updated</h3>
+
+<p>If the app is launched, we will notify interested students.</p>
+
+<label>Full Name</label>
+<input type="text" name="interested_name">
+
+<label>Email Address</label>
+<input type="email" name="interested_email">
+
+<label>Phone Number (Optional)</label>
+<input type="text" name="interested_phone">
+
+</div>
+
+<div id="businessSection" class="hidden-section">
+<h3>Business Registration Interest</h3>
+
+<p>Your details will be used to contact you when the platform launches.</p>
+
+<label>Full Name</label>
+<input type="text" name="business_owner_name">
+
+<label>Business Name</label>
+<input type="text" name="business_name">
+
+<label>Email Address</label>
+<input type="email" name="business_email">
+
+<label>Phone Number</label>
+<input type="text" name="business_phone">
+
+</div>
+
+<div id="noSection" class="hidden-section">
+<h3>Why Not?</h3>
+
+<label>Why would you not use this app?</label>
+<textarea name="why_not_use"></textarea>
+
+<label>What could change your mind?</label>
+<textarea name="what_would_change_mind"></textarea>
+
+</div>
+
+<div id="maybeSection" class="hidden-section">
+<h3>Help Us Improve</h3>
+
+<label>What features would convince you to use the app?</label>
+<textarea name="maybe_features"></textarea>
+
+<label>Do you have concerns about trust or safety?</label>
+<textarea name="maybe_concerns"></textarea>
+
+<label>Would discounts, ratings, or secure payments help?</label>
+<textarea name="maybe_incentives"></textarea>
+
+</div>
+
+<button type="submit">Submit Survey</button>
+
+</form>
 </div>
 
 <script src="script.js"></script>
