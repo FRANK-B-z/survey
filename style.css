@@ -7,7 +7,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-                url("images/background6.jpg");
+                url("images/background9.jpg");
     background-size: cover;
     background-position: center;
     color: white;
@@ -26,7 +26,7 @@ body {
 
 .logo {
     width: 150px;
-    animation: spin 20s linear infinite;
+    animation: spin 15s;
 }
 
 @keyframes spin {
@@ -148,4 +148,22 @@ button:hover {
 .email-link:active {
     transform: scale(0.98);
 }
+.hidden-section {
+    display: none;
+}
+/* Searchable university field */
+.search-input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 15px;
+    background: rgba(255,255,255,0.12);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
 
+.search-input:focus {
+    outline: none;
+    box-shadow: 0 0 10px #00c6ff;
+}
