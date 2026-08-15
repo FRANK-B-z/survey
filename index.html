@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Frank OS - the interactive personal developer portfolio of Frank Banda.">
+  <title>Frank OS | Frank Banda</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <section class="lock-screen" id="lockScreen" aria-label="Frank OS lock screen">
+    <div class="lock-content">
+      <div class="lock-brand">FRANK OS</div>
+      <time id="lockDate">Saturday<br>15 August 2026</time>
+      <p>Click anywhere to continue</p>
+    </div>
+  </section>
+
+  <div class="boot-screen" id="bootScreen" aria-live="polite">
+    <div class="boot-card">
+      <div class="boot-logo">FRANK OS</div>
+      <div class="boot-subtitle">Personal Developer Environment</div>
+      <div class="boot-progress" aria-hidden="true"><span id="bootProgress"></span></div>
+      <ul class="boot-log" id="bootLog"></ul>
+      <button class="button button-ghost" id="skipBoot" type="button">Skip boot</button>
+    </div>
+  </div>
+
+  <main class="os-shell" id="osShell" aria-label="Frank OS desktop">
+    <header class="top-bar">
+      <button class="system-button" id="startButton" type="button" aria-label="Open start menu">
+        <span class="system-mark">F</span>
+        <span>Frank OS</span>
+      </button>
+
+      <form class="global-search" id="globalSearch" role="search">
+        <span aria-hidden="true">⌕</span>
+        <input id="searchInput" type="search" placeholder="Search apps, projects, skills..." autocomplete="off" aria-label="Global search">
+      </form>
+
+      <div class="status-cluster" aria-label="System status">
+        <button class="status-pill" id="networkStatus" type="button" title="Network connected" aria-label="Network connected">Wi-Fi</button>
+        <button class="status-pill" id="batteryStatus" type="button" title="Battery 96 percent" aria-label="Battery 96 percent">96%</button>
+        <button class="status-pill" id="clockDisplay" type="button" aria-label="Current time">--:--</button>
+      </div>
+    </header>
+
+    <aside class="start-menu" id="startMenu" aria-label="Start menu" hidden>
+      <div class="start-profile">
+        <div class="avatar">FB</div>
+        <div>
+          <strong>Frank Banda</strong>
+          <span>Computer Science Student</span>
+        </div>
+      </div>
+      <div class="start-actions" id="startActions"></div>
+    </aside>
+
+    <section class="desktop" id="desktop" aria-label="Desktop workspace">
+      <div class="desktop-icons" id="desktopIcons"></div>
+      <div class="window-layer" id="windowLayer" aria-live="polite"></div>
+    </section>
+
+    <div class="notifications" id="notifications" aria-live="polite"></div>
+
+    <nav class="dock" id="dock" aria-label="Application dock">
+      <button class="dock-button" data-app="about" type="button" aria-label="Open About Me"><span>FB</span></button>
+      <button class="dock-button" data-app="projects" type="button" aria-label="Open Projects"><span>Pr</span></button>
+      <button class="dock-button" data-app="terminal" type="button" aria-label="Open Terminal"><span>_</span></button>
+      <button class="dock-button" data-app="contact" type="button" aria-label="Open Contact"><span>@</span></button>
+    </nav>
+  </main>
+
+  <section class="matrix-mode" id="matrixMode" hidden aria-label="Matrix mode">
+    <canvas id="matrixCanvas"></canvas>
+    <div class="matrix-copy">
+      <strong>FRANK OS :: MATRIX MODE</strong>
+      <span>Educational cybersecurity visuals only. Press ESC to exit.</span>
+    </div>
+  </section>
+
+  <template id="windowTemplate">
+    <article class="app-window" role="dialog" aria-modal="false">
+      <header class="window-titlebar">
+        <div class="window-title">
+          <span class="window-icon"></span>
+          <span class="window-name"></span>
+        </div>
+        <div class="window-controls">
+          <button class="window-control minimize" data-action="minimize" type="button" aria-label="Minimize">−</button>
+          <button class="window-control maximize" data-action="maximize" type="button" aria-label="Maximize">□</button>
+          <button class="window-control close" data-action="close" type="button" aria-label="Close">×</button>
+        </div>
+      </header>
+      <div class="window-content"></div>
+      <span class="resize-handle" data-resize="corner" aria-hidden="true"></span>
+    </article>
+  </template>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

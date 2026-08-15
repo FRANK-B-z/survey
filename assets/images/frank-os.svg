@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">Frank OS project thumbnail</title>
+  <desc id="desc">An operating system inspired portfolio desktop.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#071015"/>
+      <stop offset=".55" stop-color="#10242d"/>
+      <stop offset="1" stop-color="#06120f"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1">
+      <stop offset="0" stop-color="#29d3a1"/>
+      <stop offset="1" stop-color="#5aa7ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="600" fill="url(#bg)"/>
+  <path d="M0 120h960M0 240h960M0 360h960M0 480h960M160 0v600M320 0v600M480 0v600M640 0v600M800 0v600" stroke="#fff" stroke-opacity=".06"/>
+  <rect x="70" y="58" width="820" height="44" rx="16" fill="#ffffff" opacity=".08"/>
+  <rect x="300" y="74" width="330" height="13" rx="7" fill="#fff" opacity=".18"/>
+  <rect x="142" y="160" width="430" height="275" rx="24" fill="#101d25" stroke="#fff" stroke-opacity=".16"/>
+  <rect x="606" y="190" width="210" height="160" rx="22" fill="#101d25" stroke="#fff" stroke-opacity=".16"/>
+  <circle cx="178" cy="194" r="8" fill="#ff647c"/>
+  <circle cx="204" cy="194" r="8" fill="#f5c95b"/>
+  <circle cx="230" cy="194" r="8" fill="#29d3a1"/>
+  <rect x="182" y="245" width="180" height="18" rx="9" fill="url(#accent)"/>
+  <rect x="182" y="287" width="310" height="12" rx="6" fill="#91a7ad"/>
+  <rect x="182" y="318" width="250" height="12" rx="6" fill="#91a7ad" opacity=".72"/>
+  <rect x="654" y="230" width="118" height="118" rx="28" fill="url(#accent)"/>
+  <text x="688" y="306" fill="#03110d" font-family="Inter, Arial, sans-serif" font-size="44" font-weight="800">FB</text>
+  <rect x="325" y="498" width="310" height="58" rx="18" fill="#ffffff" opacity=".1" stroke="#fff" stroke-opacity=".14"/>
+  <rect x="358" y="514" width="34" height="34" rx="10" fill="url(#accent)"/>
+  <rect x="414" y="514" width="34" height="34" rx="10" fill="#fff" opacity=".18"/>
+  <rect x="470" y="514" width="34" height="34" rx="10" fill="#fff" opacity=".18"/>
+  <rect x="526" y="514" width="34" height="34" rx="10" fill="#fff" opacity=".18"/>
+  <text x="142" y="500" fill="#eef6f7" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="800">Frank OS</text>
+</svg>

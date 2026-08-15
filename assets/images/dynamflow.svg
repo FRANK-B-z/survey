@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">Dynamflow project thumbnail</title>
+  <desc id="desc">A digital product brand system illustration.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#111827"/>
+      <stop offset=".5" stop-color="#153033"/>
+      <stop offset="1" stop-color="#1c2229"/>
+    </linearGradient>
+    <linearGradient id="flow" x1="0" x2="1">
+      <stop offset="0" stop-color="#f5c95b"/>
+      <stop offset=".48" stop-color="#29d3a1"/>
+      <stop offset="1" stop-color="#5aa7ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="600" fill="url(#bg)"/>
+  <circle cx="220" cy="175" r="120" fill="#f5c95b" opacity=".12"/>
+  <circle cx="760" cy="420" r="190" fill="#29d3a1" opacity=".13"/>
+  <path d="M120 350c130-180 250-180 360-40s230 135 360-35" fill="none" stroke="url(#flow)" stroke-width="34" stroke-linecap="round"/>
+  <path d="M130 400c110-90 210-94 300 2s190 100 300 2" fill="none" stroke="#fff" stroke-opacity=".12" stroke-width="18" stroke-linecap="round"/>
+  <rect x="130" y="94" width="700" height="95" rx="22" fill="#fff" opacity=".08" stroke="#fff" stroke-opacity=".14"/>
+  <rect x="170" y="124" width="68" height="36" rx="12" fill="url(#flow)"/>
+  <rect x="266" y="124" width="210" height="17" rx="9" fill="#eef6f7" opacity=".86"/>
+  <rect x="266" y="154" width="320" height="11" rx="6" fill="#91a7ad" opacity=".78"/>
+  <rect x="168" y="455" width="155" height="62" rx="18" fill="#fff" opacity=".1" stroke="#fff" stroke-opacity=".14"/>
+  <rect x="402" y="455" width="155" height="62" rx="18" fill="#fff" opacity=".1" stroke="#fff" stroke-opacity=".14"/>
+  <rect x="636" y="455" width="155" height="62" rx="18" fill="#fff" opacity=".1" stroke="#fff" stroke-opacity=".14"/>
+  <text x="130" y="265" fill="#eef6f7" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="800">Dynamflow</text>
+</svg>
